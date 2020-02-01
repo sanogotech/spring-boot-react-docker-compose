@@ -29,6 +29,7 @@ public class CourseRESTController {
 
 	@GetMapping("")
 	public Map<String, Object> getCourses() {
+		System.out.println("-- Call getCourses ---");
 		Map<String, Object> response = new HashMap<String, Object>();
 		response.put("courses", courseService.getCourses());
 		return response;
@@ -37,6 +38,7 @@ public class CourseRESTController {
 
 	@PostMapping("")
 	public Map<String, Object> addCourse(@RequestBody Course course) {
+		System.out.println("-- Call addCourse ---");
 		Map<String, Object> response = new HashMap<String, Object>();
 		List<String> errors = new ArrayList<String>();
 		try {
